@@ -5,12 +5,15 @@ public class PrintAllUniqueWordsOfAString {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		/*
-		 * Input  : Welcome to Geeks for Geeks.
-Output : Welcome 
-         to
-         for*/
-		//String str= "Welcome to Geeks for Geeks.";
+
+
+		
+		
+		
+		
+		
+		
+		
 		String str ="Java is great.Python is also great."; 
 		
 		String[] words = str.replace("."," ").split(" ");

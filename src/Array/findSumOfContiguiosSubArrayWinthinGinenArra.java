@@ -35,19 +35,20 @@ public class findSumOfContiguiosSubArrayWinthinGinenArra {
 	            System.out.println("cu:"+currMax);
 	                System.out.println("Max:"+Max);
 	            			System.out.println(currMax+"+"+arr[i]);
-	            			
+	            			//-5,-6,-1,-2,-7,1,2,-1
 	      	               
 //perform by next iteration when i=1.-5+(-6)
-	            currMax+=arr[i];
-	            if(currMax<arr[i]){
-	                currMax=arr[i];//-6
-	                holdIndex=i;
+	            currMax+=arr[i];//-5+(-6)=-11//-6-1=-7//-3//-2-7=-9//-7+1=6//1+2=3
+	            System.out.println("arr[i]:"+arr[i]);//-11,-7
+	            if(currMax<arr[i]){//3<2
+	                currMax=arr[i];//-6,-1,-2,-7,1,3
+	                holdIndex=i;////1,2,3,4,5
 	               
 	            }
-	            if(currMax>=Max){//-6>-5
-	                Max=currMax;
-	                start=holdIndex;
-                    end=i;	                
+	            if(currMax>=Max){//\//
+	                Max=currMax;//-1,1
+	                start=holdIndex;//2,5
+                    end=i;	           //  5
 	            }
 	        }
 	        System.out.println("max index:"+start);
@@ -60,7 +61,8 @@ public class findSumOfContiguiosSubArrayWinthinGinenArra {
 	//	int[] arr=  {1, 2, -3, -4, 0, 6, 7, 8, 9,-1};
 		int[] arr={-5,-6,-1,-2,-7,1,2,-1};
        //int[] arr= {10,-5,1};
-	//	int[] arr={-1,-2,-3,-6,-8,-6};
+		//int[] arr={-1,-2,-3,-6,-8,-6};
+	//	int[] arr={1, 2, -3, -4, 0, 6, 7, 8, 9,-1};
 		System.out.println(maxSubarraySum(arr,arr.length));
 	}
 

@@ -41,7 +41,8 @@ public class findMinimumContiguiosSubarray {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int[] arr =  {1, 2, -3, -4, 0, 6, 7, 8, 9};
+		//int[] arr =  {1, 2, -3, -4, -18,0, 6, 7, 8, 9};
+		int[] arr= {-3,-4,6,7,8,9,-1};
 		minSubArraySum(arr);
 
 	}

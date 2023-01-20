@@ -43,22 +43,22 @@ Contiguous sub arrays must have consecutive indexes i.e., {5,4} is contiguous su
 		for(int i=0;i<arr.length;i++) {
 			System.out.println(max_ending_here+"+"+arr[i]);
 
-			max_ending_here=max_ending_here+arr[i];
-			if(max_so_far<max_ending_here) {
+			max_ending_here=max_ending_here+arr[i];//-4,0
+			if(max_so_far<max_ending_here) {//
 				max_so_far=max_ending_here;
-				starIndex=holdStartIndex;
-				endIndex=i;
+				starIndex=holdStartIndex;//0,4
+				endIndex=i;//3
 				
 			}
-			if(max_ending_here<0) {
+			if(max_ending_here<0) {//-4<0
 				
 				max_ending_here=0;
-				holdStartIndex=i+1;
+				holdStartIndex=i+1;//4
 			}
 			
 			
 		}
-		System.out.print(max_ending_here+" "+starIndex+" "+endIndex);
+		System.out.print(max_so_far+ " "+max_ending_here+" "+starIndex+" "+endIndex);
 		
 		
 		

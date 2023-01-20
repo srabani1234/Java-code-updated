@@ -23,21 +23,22 @@ The longest consecutive elements sequence is [1, 2, 3, 4, 5], therefore the prog
 		
 		for(int i=0;i<arr.length;i++) {
 			
-			if(!hs.contains(arr[i]-1)) {
+			
+			if(!hs.contains(arr[i]-1)) {//1,
 				
-				no=arr[i];
+				no=arr[i];//1
 				
 				while(hs.contains(no)) {
 					
 					
-					no++;
+					no++;//2
 					System.out.println("no:"+no);
 				}
 				
 				
-				if(largeLength<no-arr[i]) {
+				if(largeLength<no-arr[i]) {//1<1
 				
-					largeLength=no-arr[i];
+					largeLength=no-arr[i];//1
 				for(int j=arr[i];j<no;j++) {
 					
 					System.out.print(j);

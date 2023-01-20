@@ -38,7 +38,7 @@ public class StringRearrange {
 		//like above String elemnt which count grater proceed first
 		//We can create such a priority queue by passing a custom Comparator that compares two Strings charecter by their count.base on grater count
 	    PriorityQueue<Character> maxHeap=new PriorityQueue<>((a,b)->map.get(b)-map.get(a));//One of the PriorityQueue constructors takes a Comparator as an argument:
-//and comparator has one abstrat method compare that is here
+//and comparator has one abstrat method compare that is here.greater count in priority quee store at top like a here
 	    maxHeap.addAll(map.keySet());
 	    System.out.println("maxHeap:"+maxHeap);
 	    StringBuilder result=new StringBuilder();
@@ -52,6 +52,7 @@ public class StringRearrange {
 	        result.append(current);
 	        result.append(next);
 	        System.out.println("result:"+result);
+	        System.out.println("map mid:"+map);
 	        map.put(current,map.get(current)-1);
 	        System.out.println("map.get(current):"+map.get(current));
 	        map.put(next,map.get(next)-1);
@@ -75,7 +76,9 @@ public class StringRearrange {
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		 System.out.println(rearrangeCharacters("acbcbcc"));
+		// System.out.println(rearrangeCharacters("acbcbcc"));//cbcbcac
+
+		 System.out.println(rearrangeCharacters("aabbacc"));
 
 	}
 

@@ -15,6 +15,12 @@ public class ReturnTheMaximumlengthofContiguousSubarrayWithAnEqualNumberOf0and1 
 		 * 
 		 * */
 		//consider 0=-1 and 1=1
+		/*int[] arr={1,1,0,1,0,1,1}
+                         <--0-->
+		             <x>
+                      <----y--> 
+		   x==y
+		 * */
 		int[] arr = {0,1,1,0,1,0,1,1,0,0,1,1,1};
 		HashMap<Integer,Integer> map = new HashMap<Integer,Integer>();
 		map.put(0,-1);//sum 0, and index=-1 .initialize map
@@ -39,7 +45,7 @@ public class ReturnTheMaximumlengthofContiguousSubarrayWithAnEqualNumberOf0and1 
 				System.out.println(i +"-"+map.get(sum));
 				len=i-map.get(sum);
 				if(maxLen<len) {
-                  maxLen=len;					
+                   maxLen=len;					
 				}
 			}else
 				{map.put(sum, i);}

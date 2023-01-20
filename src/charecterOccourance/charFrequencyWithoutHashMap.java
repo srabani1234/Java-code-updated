@@ -14,7 +14,7 @@ public class charFrequencyWithoutHashMap
             for(int j = i+1; j <string.length; j++) {  
                 if(string[i] == string[j]) {  
                     freq[i]++;  
-                    System.out.println(string[i]+""+string[j]+""+freq[i]);  
+                    System.out.println(string[i]+""+string[j]+" "+freq[i]);  
                     //Set string[j] to 0 to avoid printing visited character  
                     string[j] = '0';  
                    // System.out.println(string[i]+""+string[j]+""+freq[i]);

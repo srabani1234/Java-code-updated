@@ -38,7 +38,7 @@ public class getMaxOccuringChar {
 		char rev=' ';
 		int max=count[0];
 		int min=count[0];
-		for( i=0;i<ch.length-1;i++) {
+		for( i=0;i<ch.length;i++) {
 			
 			if(ch[i]!='0' && ch[i]!=' ') {
 				
